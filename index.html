@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+   	<meta name="description" content="PABLO TOVAR CASTREJON web page. Página personal de Pablo Tovar Castrejón">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pablo Tovar Castrejón</title>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/ResumeStyle.css">
+  </head>
+  <body ng-app="myApp">
+	<div class="container pequeno ">
+		<div class="row bgstyled1" id="header">
+			<div class="col-xs-12 col-sm-2 col-md-2 col-bs-5">
+				<img src="images/FotoPeque.jpg" alt="" class="img-responsive img-circle">
+			</div>
+			<div class="col-xs-12 col-sm-10 col-md-10 col-bs-7">
+				<h1 class="nombre text-left">PABLO  TOVAR  CASTREJON</h1>
+				<h2 class="cursiva"><p>Ingeniero en Física y Computación</p></h2>
+			</div>
+		</div>	
+		<div id = "containerMenu" class="row pequeno bordeRedondeado">
+			<nav id="menu-principal">
+				<ul class="nav nav-tabs bordeRedondeado">
+					<li><a id="linkInicio"      class="linkMenu active"> Inicio </a></li>
+					<li><a id="linkExperiencia" class="linkMenu"> Experiencia laboral y proyectos </a></li>
+					<li><a id="linkFormacion"   class="linkMenu"> Formacion academica </a></li>
+					<li><a id="linkCursos"      class="linkMenu"> Certificaciones </a></li>
+					<li><a id="linkCanales"     class="linkMenu"> Canales Youtube </a></li>
+					<li><a id="linkTrabajos"    class="linkMenu"> Fotografia </a></li>
+					<li><a id="linkCurriculum"  class="linkMenu"> Curriculum PDF </a></li>
+				</ul>
+
+			</nav>
+		</div>
+		<div class="bgstyled1 pequeno" id="pestana">
+		</div>
+		
+	</div>
+
+        <formacion-item
+            institucion="Instituto Politécnico Nacional"
+            escuela="Centro de Investigación en Computación"
+            titulo="M. en C. en Ingeniería de Cómputo"
+            trabajo="Tesis: Aplicación de métodos de procesamiento digital de voz a señales de audio para la extracción de características de interés para el lenguaje musical"
+            periodo="Ene/14 - Jul/16"
+            imagen="images/CIC1.jpg"
+        ></formacion-item>
+        
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/ResumeJS.js"></script>
+  </body>
+</html>
