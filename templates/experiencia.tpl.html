@@ -1,0 +1,26 @@
+<div class="row well">
+    <div class="col-xs-12 col-sm-6 col-md-6" ng-class="{'col-sm-push-6': ctrl.pull}">
+        <p>
+            <b>{{ctrl.empresa}}</b>        
+            <br><br>
+            <b>{{ctrl.puesto}}</b>
+            <br><br>
+            <p>
+                <ng-bind-html 
+                    ng-bind-html=ctrl.actividades
+                ></ng-bind-html> 
+                 <p ng-bind-html="myHTML"></p>
+                <a ng-show={{ctrl.link}} href="{{ctrl.link}}" target="_blank" class="link-under"> Consultar {{ctrl.tipo}}</a> 
+            </p>
+            <br><br>
+            Periodo: {{ctrl.periodo}}
+        </p>
+
+    </div>
+
+    <div class="hidden-xs col-sm-6 col-md-6" ng-class="{'col-sm-pull-6': ctrl.pull}">
+        <img src={{ctrl.imagePath}} alt="image" class="img-responsive img-center">
+    </div>
+</div>
+
+
