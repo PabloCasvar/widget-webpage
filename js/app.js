@@ -1,6 +1,32 @@
 (function(angular){
 
-var app = angular.module("myApp", ['ngSanitize']);
+var app = angular.module("myApp", ['ngSanitize', 'ngRoute']);
+
+app.config(function($routeProvider, $locationProvider) {
+  $locationProvider.hashPrefix('');
+  $routeProvider
+  .when("/", {
+    templateUrl : "templates/inicio.html"
+  })
+  .when("/experiencia", {
+    templateUrl : "templates/experiencia.html"
+  })
+  .when("/estudios", {
+    templateUrl : "templates/estudios.html"
+  })
+  .when("/cursos", {
+    templateUrl : "templates/cursos.html"
+  })
+  .when("/canales", {
+  templateUrl : "templates/canales.html"
+  })
+  .when("/trabajos", {
+    templateUrl : "templates/trabajos.html"
+  })
+  .when("/curriculum", {
+    templateUrl : "templates/curriculum.html"
+  });
+});
 
 app.component('formacionItem', {
     bindings:{

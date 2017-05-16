@@ -9,6 +9,7 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>-->
     <script src="js/angular.min.js"></script>
 	<script src="js/angular-sanitize.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
     <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -28,131 +29,22 @@
 		<div id = "containerMenu" class="row pequeno bordeRedondeado">
 			<nav id="menu-principal">
 				<ul class="nav nav-tabs bordeRedondeado">
-					<li><a id="linkInicio"      class="linkMenu active"> Inicio </a></li>
-					<li><a id="linkExperiencia" class="linkMenu"> Experiencia laboral y proyectos </a></li>
-					<li><a id="linkFormacion"   class="linkMenu"> Formacion academica </a></li>
-					<li><a id="linkCursos"      class="linkMenu"> Certificaciones </a></li>
-					<li><a id="linkCanales"     class="linkMenu"> Canales Youtube </a></li>
-					<li><a id="linkTrabajos"    class="linkMenu"> Fotografia </a></li>
-					<li><a id="linkCurriculum"  class="linkMenu"> Curriculum PDF </a></li>
+					<li><a href="/"      		class="linkMenu active"> Inicio </a></li>
+					<li><a href="#experiencia" 	class="linkMenu"> Experiencia laboral y proyectos </a></li>
+					<li><a href="#estudios"   	class="linkMenu"> Formacion academica </a></li>
+					<li><a href="#cursos"      	class="linkMenu"> Certificaciones </a></li>
+					<li><a href="#canales"     	class="linkMenu"> Canales Youtube </a></li>
+					<li><a href="#trabajos"    	class="linkMenu"> Fotografia </a></li>
+					<li><a href="#curriculum"  	class="linkMenu"> Curriculum PDF </a></li>
 				</ul>
 
 			</nav>
 		</div>
-		<div class="bgstyled1 pequeno" id="pestana">
-		</div>
-		
+		<div ng-view class="bgstyled1 pequeno"></div>
 	</div>
-
-		<experiencia-item
-			empresa =		"Anzen Soluciones, S.A. de C.V."
-			puesto = 		"Puesto: Desarrollador JAVA"
-			actividades = 	"Actividades: <br><br>
-							<ul>
-								<li>Desarrollo de Front-End para institución bancaria haciendo uso de HTML5, CSS3, bootstrap, javaScript, Angular 1.6, Git, Maven y Backbase</li>
-							</ul>"
-			periodo = 		"Dic/16 - Actual"
-			imagen = 		"angular.png"
-			pull = 			"true"
-		></experiencia-item>
-
-		<experiencia-item
-			empresa = 		"RGOV de México, S. de R.L. de C.V."
-			puesto =		"Puesto: Diseñador Web"
-			actividades =   "Actividades: <br><br>
-							<ul>
-								<li>Desarrollo de páginas web responsivas y dinámicas (HTML5, CSS3, bootstrap, javaScript, JQuery)</li>
-								<li>Desarrollo de páginas web haciendo uso de manejador de contenido (CMS) Drupal 7</li>
-								<li>Edición de Vistas en framework ASP.NET MVC</li>
-								<li>Participar y contribuir en el diseño y usabilidad de interfaces</li>
-								<li>Apoyar en la implementación de Bing Maps v6.3 para aplicación web</li>
-								<li>Edición y creación de imágenes e íconos para su uso en páginas web haciendo uso de software Photoshop CS6 e illustrator CS6 </li>
-							</ul>"
-			periodo = 		"Jun/16 - Dic/16"
-			imagen = 		"OCAVM.png"
-		></experiencia-item>
-
-		<experiencia-item
-			empresa = 		"Centro de Investigación en Computación"
-			puesto = 		"Tesis: Aplicación de métodos de procesamiento digital de voz a señales de audio para la extracción de características de interés para el lenguaje musical."
-			actividades = 	"Desarrollo de software para la implementación de autocorrelación, transformada de Fourier, redes neuronales y modelos probabilísticos a señales emitidas por el piano para la obtención de partituras usando MATLAB y formato MIDI. "
-			tipo = 			"resumen"
-			link = 			"https://dl.dropboxusercontent.com/s/tjbx0snkr0ph9wf/Resumen%20Tesis.Tovar%20Castrej%C3%B3n%20Pablo.pdf?dl=0"
-			periodo = 		"Ene/14 - Jul/16"
-			imagen = 		"HMM1.jpg"
-			pull = 			"true"
-		></experiencia-item>
-
-		<experiencia-item
-			empresa = 		"Universidad Autónoma Metropolitana - Unidad Azcapotzalco"		
-			puesto = 		"Puesto: Ayudante de profesor"
-			actividades = 	"Impartir clase frente a grupo de entre 36 y 40 personas, resolviendo problemas y ayudando a los alumnos en el desarrollo de prácticas en Física. <br> Asignaturas: cálculo diferencial, cálculo Integral, laboratorio de movimiento de una partícula, laboratorio de cuerpo rígido, laboratorio de electromagnetismo, laboratorio de óptica, instrumentación y equipo."
-			tipo = 			""
-			link = 			""
-			periodo = 		"Oct/12 - Mar/15, Jul/11 - Feb/12"
-			imagen = 		"UAM1.jpg"
-		></experiencia-item>
-
-		<experiencia-item
-			empresa =		"Centro de Investigaciones en Óptica A.C." 		
-			puesto = 		"Proyecto: Implementación electrónica del algoritmo de cambio de fase para la obtención de interferogramas digitales."		
-			actividades = 	"Diseño y programación de una interfaz gráfica de usuario en MATLAB así como diseño y construcción del circuito de acoplamiento que controle el desplazamiento de un pistón piezoeléctrico."
-			tipo =			"reporte" 			
-			link = 			"https://www.dropbox.com/s/igaqn1xx0x57srg/Implementaci%C3%B3n%20electr%C3%B3nica%20del%20algoritmo%20de%20desplazamiento%20de%20fase%20.%20Tovar%20Castrej%C3%B3n%20Pablo..pdf?dl=0"
-			pull = 			"true"
-			periodo = 		"Oct/13"
-			imagen = 		"interferograma.jpg"
-		></experiencia-item>
-
-		<experiencia-item
-			empresa = 		"Universidad Autónoma Metropolitana - Unidad Azcapotzalco"		
-			puesto = 		"Proyecto: Diseño e instrumentación de un procesador digital de audio en MATLAB."
-			actividades = 	"Diseño y programación de un procesador digital de audio que permita la reproducción, filtrado, análisis espectral, aplicación de efectos como eco, mezcla de audio, grabación y análisis de notas musicales presentes en una señal de audio."
-			tipo = 			"reporte"
-			link = 			"https://www.dropbox.com/s/3hcimismqpymzsu/Dise%C3%B1o%20e%20instrumentaci%C3%B3n%20de%20un%20procesador%20digital%20de%20audio%20en%20MATLAB.pdf?dl=0"			
-			periodo = 		"Jul/13 - Ago/13"
-			imagen = 		"procesador.jpg"
-		></experiencia-item>
-
-		<formacion-item
-            institucion="Instituto Politécnico Nacional"
-            escuela =	"Centro de Investigación en Computación"
-            titulo =	"M. en C. en Ingeniería de Cómputo"
-            trabajo =	"Tesis: Aplicación de métodos de procesamiento digital de voz a señales de audio para la extracción de características de interés para el lenguaje musical"
-            periodo =	"Ene/14 - Jul/16"
-            imagen =	"CIC1.jpg"
-        ></formacion-item>
-
-		<formacion-item
-            institucion="Universidad Autónoma Metropolitana"
-            escuela =	"Unidad Azcapotzalco"
-            titulo =	"Licenciatura en Ingeniería Física"
-            periodo =	"Sep/08 - Oct-13"
-            imagen =	"UAM1.jpg"
-			pull =		"true"
-        ></formacion-item>
-
-		<formacion-item
-            institucion="Universidad Politécnica de Cataluña"
-            escuela =	"Escuela Técnica Superior de Ingeniería de Telecomunicaciones de Barcelona"
-            titulo =	"Programa de Movilidad"
-            periodo =	"Feb/12 - Jul/12"
-            imagen =	"UPC1.jpg"
-        ></formacion-item>
-
-		<formacion-item
-            institucion="Instituto Politécnico Nacional"
-            escuela =	'Centro de Estudios Científicos y Tecnológicos #9 "Juan de Dios Bátiz Paredes"'
-            titulo =	"Técnico en Sistemas Digitales"
-            periodo =	"Ago/03 - Sep/06"
-            imagen =	"Batiz1.jpg"
-			pull =		"true"
-        ></formacion-item>
-        
-
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/ResumeJS.js"></script>
+	<!--<script type="text/javascript" src="js/ResumeJS.js"></script>-->
   </body>
 </html>
