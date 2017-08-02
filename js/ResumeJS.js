@@ -15,38 +15,12 @@ function colocaContenidoPorID(id){
 	console.log("nombre de archivo: " + fileName);
 	peticionContenido("/contenido/" + fileName)
 	$("#pestana").fadeIn(500);	
-}
+};
 
 function sustituyeLinkActivo(selector){
 	$(".active").removeClass("active");
         $(selector).addClass("active");
-}
-
-function peticionContenido(htmlFile){
-	$.ajax( {
-    		url: htmlFile,
-    		cache: false,
-    		success: function(result) {
-    		        console.log("petición realizada");
-        		$("#pestana").html(result);
-    		}
-	});
-}
-
-function agregaLinksMenu(){
-	
-	$(".linkMenu").each(function(){
-			
-		$(this).click(function(){		
-		        sustituyeLinkActivo(this);
-			atributoID = $(this).attr("id"); 
-		        $("#pestana").fadeOut(500, function(){
-		        
-		        	colocaContenidoPorID( atributoID );
-		        });
-		});
-	});
-}
+};
 
 function ajustaLinksMenu(){
 	
@@ -62,7 +36,7 @@ function ajustaLinksMenu(){
 		var margen = (anchoPadre - acumulador)/(numeroLinks + 1);
 		$(".linkMenu").css({"margin-right": "0", "margin-left": margen.toString() + "px"});
 	}
-}
+};
 
 function agregaScrollMenu(){
         var altura = $("#header").outerHeight(true);
@@ -78,4 +52,13 @@ function agregaScrollMenu(){
 			$("#pestana").css("margin-top", "0");
 		}
 	});
-}
+};
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+};
