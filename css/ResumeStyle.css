@@ -7,7 +7,7 @@ body{
 	background-image: url("../images/fondo2.png"); 
 	padding: 15px;
 	border-radius: 5px;
-	margin: 15px;
+	margin: 10px;
 
 }
 
@@ -24,11 +24,6 @@ body{
 img{
 	z-index: 5;
 }
-
-#header{
-        margin-bottom: 0;
-}
-
 
 @font-face{
 	font-family: 'CCursiva';
@@ -175,6 +170,55 @@ iframe{
 	
 
 }
+
+.burger{
+	font-size:20px;
+	cursor:pointer;
+	color: #337ab7; 
+	margin: 15px;
+	background-color: #222;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #222;
+    overflow-x: hidden;
+    transition: 0.5s;
+	padding-top: 60px;
+	border-radius: 5px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #337ab7;
+    display: block;
+	transition: 0.3s;
+	border-radius: 5px;
+	font-family: CMolde;  
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
 
 .topnav {
   overflow: hidden;
