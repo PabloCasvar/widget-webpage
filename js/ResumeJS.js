@@ -1,5 +1,6 @@
 $( window ).load(function(){	
 	clickOnLink();
+	animateFlotingMenu();
 });
 
 function agregaScrollMenu(){
@@ -28,4 +29,25 @@ function closeNav() {
 
 function clickOnLink(){
 	$("#mySidenav a").bind("click", closeNav);
+
+	$("#mySidenav a").click(function(){
+		$("html, body").animate({
+			scrollTop: $("[ng-view]").offset().top
+		}, 2000);
+	});
+};
+
+function animateFlotingMenu(){
+	$(window)
+	.scroll(function(){
+		var headerHeight = $("#header").outerHeight(true);
+		var scrollDoc = $(document).scrollTop()
+		var selectorMenu = $("span.burger");
+		if (scrollDoc >= headerHeight){
+			selectorMenu.css({"position": "fixed", "top": "15px"});
+		}else{
+			selectorMenu.css({"position": "static"});
+		}
+		console.log();
+	});
 };
