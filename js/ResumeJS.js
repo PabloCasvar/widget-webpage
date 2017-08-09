@@ -30,7 +30,7 @@ function closeNav() {
 function clickOnLink(){
 	$("#mySidenav a").bind("click", closeNav);
 
-	$("#mySidenav a").click(function(){
+	$("#mySidenav a:not(.closebtn)").click(function(){
 		$("html, body").animate({
 			scrollTop: $("[ng-view]").offset().top
 		}, 2000);
@@ -44,7 +44,8 @@ function animateFlotingMenu(){
 		var scrollDoc = $(document).scrollTop()
 		var selectorMenu = $("span.burger");
 		if (scrollDoc >= headerHeight){
-			selectorMenu.css({"position": "fixed", "top": "15px"});
+			topCSS = scrollDoc - headerHeight + 15 + "px";
+			selectorMenu.css({"position": "relative", "top": topCSS});
 		}else{
 			selectorMenu.css({"position": "static"});
 		}
