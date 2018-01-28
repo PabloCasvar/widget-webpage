@@ -20,17 +20,21 @@ function agregaScrollMenu(){
 };
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("navSidebar").style.width = "250px";
 };
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("navSidebar").style.width = "0";
 };
 
 function clickOnLink(){
-	$("#mySidenav a").bind("click", closeNav);
+	$("#navSidebar a").bind("click", function(){
+		$(".active").toggleClass("active");
+		$( this ).toggleClass("active");
+		closeNav();
+	});
 
-	$("#mySidenav a:not(.closebtn)").click(function(){
+	$("#navSidebar a:not(.closebtn)").click(function(){
 		$("html, body").animate({
 			scrollTop: $("[ng-view]").offset().top
 		}, 2000);
