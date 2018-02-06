@@ -28,7 +28,7 @@ function closeNav() {
 };
 
 function clickOnLink(){
-	$("#navSidebar a").bind("click", function(){
+	$("#navSidebar a:not(.closebtn)").bind("click", function(){
 		$(".active").toggleClass("active");
 		$( this ).toggleClass("active");
 		closeNav();
